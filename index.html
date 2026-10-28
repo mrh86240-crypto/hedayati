@@ -3,7 +3,7 @@
 <html lang="fa" dir="rtl">
 <head>
   <link rel="icon" type="image/png" href="favcon.png">
-<link rel="apple-touch-icon" href="favcon.png">
+  <link rel="apple-touch-icon" href="favcon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -59,6 +59,68 @@
       line-height: 2;
     }
 
+    .contact {
+      max-width: 650px;
+      margin: 10px auto 35px;
+      padding: 24px 16px;
+      width: calc(100% - 24px);
+      border: 1px solid #d8b56d;
+      border-radius: 18px;
+      background: #101b2d;
+      color: #d8b56d;
+    }
+
+    .contact h2 {
+      font-size: 23px;
+      margin: 0 0 10px;
+    }
+
+    .contact-intro {
+      color: white;
+      line-height: 2;
+    }
+
+    .advisor {
+      margin-top: 25px;
+      padding-top: 18px;
+      border-top: 1px solid #51482f;
+    }
+
+    .advisor h3 {
+      color: white;
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border: 1px solid #d8b56d;
+      border-radius: 9px;
+      background: #d8b56d;
+      color: #101b2d;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .contact-btn.telegram {
+      background: transparent;
+      color: #d8b56d;
+    }
+
+    .contact-btn:focus-visible {
+      outline: 2px solid white;
+      outline-offset: 3px;
+    }
+
     footer {
       padding: 25px 10px;
       margin-top: 30px;
@@ -89,6 +151,41 @@
       ملک می‌خوای؟ بیا هدایتی<br>
       چون با خیال راحت هدایتی
     </p>
+  </section>
+
+  <section class="contact">
+    <h2>ارتباط با املاک هدایتی</h2>
+    <p class="contact-intro">
+      برای خرید، فروش و اجاره ملک در تبریز با ما در ارتباط باشید.
+    </p>
+
+    <div class="advisor">
+      <h3>مشاور اول</h3>
+      <div class="buttons">
+        <a class="contact-btn" href="tel:+989149168334">
+          تماس با مشاور اول
+        </a>
+        <a class="contact-btn telegram"
+           href="https://t.me/+989149168334"
+           target="_blank" rel="noopener noreferrer">
+          تلگرام مشاور اول
+        </a>
+      </div>
+    </div>
+
+    <div class="advisor">
+      <h3>مشاور دوم</h3>
+      <div class="buttons">
+        <a class="contact-btn" href="tel:+989304687712">
+          تماس با مشاور دوم
+        </a>
+        <a class="contact-btn telegram"
+           href="https://t.me/+989304687712"
+           target="_blank" rel="noopener noreferrer">
+          تلگرام مشاور دوم
+        </a>
+      </div>
+    </div>
   </section>
 
   <footer>
