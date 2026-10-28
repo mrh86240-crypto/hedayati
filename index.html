@@ -2,19 +2,25 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <link rel="icon" type="image/png" href="favcon.png">
-  <link rel="apple-touch-icon" href="favcon.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/png" href="favcon.png">
+  <link rel="apple-touch-icon" href="favcon.png">
 
   <meta name="google-site-verification" content="GJgiGcjUJr2xIs5jYI0a8oOZw12W3oNBlBu8nTtl5Pw">
   <meta name="description" content="املاک هدایتی تبریز؛ خرید، فروش و اجاره ملک با خیال راحت">
 
-  <title>املاک هدایتی | تبریز</title>
+  <meta name="theme-color" content="#101b2d">
+  <title>املاک هدایتی | خرید و فروش ملک در تبریز</title>
 
   <style>
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -22,15 +28,15 @@
       background: #101b2d;
       color: #d8b56d;
       text-align: center;
-      font-family: sans-serif;
+      font-family: Tahoma, Arial, sans-serif;
     }
 
     header {
-      padding: 35px 15px 20px;
+      padding: 30px 15px 15px;
     }
 
     h1 {
-      margin-bottom: 12px;
+      margin: 0;
       font-size: 30px;
     }
 
@@ -38,16 +44,16 @@
       display: block;
       width: calc(100% - 20px);
       max-width: 1400px;
-      height: clamp(300px, 60vw, 700px);
+      height: clamp(280px, 60vw, 700px);
       object-fit: contain;
-      border-radius: 18px;
       border: 1px solid #d8b56d;
-      margin: 10px auto 30px;
+      border-radius: 18px;
+      margin: 10px auto 25px;
     }
 
     .welcome {
       color: white;
-      padding: 0 15px 30px;
+      padding: 0 15px 25px;
       line-height: 2;
     }
 
@@ -58,26 +64,41 @@
       line-height: 2;
     }
 
+    .listings,
     .contact {
-      max-width: 650px;
-      margin: 10px auto 35px;
-      padding: 24px 16px;
       width: calc(100% - 24px);
+      max-width: 900px;
+      margin: 25px auto;
+      padding: 24px 16px;
       border: 1px solid #d8b56d;
       border-radius: 18px;
-      background: #101b2d;
-      color: #d8b56d;
     }
 
-    .contact h2,
-    .listings h2 {
+    .listings h2,
+    .contact h2 {
+      margin: 0 0 12px;
       font-size: 23px;
-      margin: 0 0 10px;
     }
 
+    .listings-intro,
     .contact-intro {
       color: white;
       line-height: 2;
+    }
+
+    .empty-listings {
+      margin-top: 20px;
+      padding: 22px 14px;
+      background: #16243a;
+      border: 1px solid #51482f;
+      border-radius: 12px;
+      color: white;
+      line-height: 2;
+    }
+
+    .empty-listings h3 {
+      color: #d8b56d;
+      margin-top: 0;
     }
 
     .advisor {
@@ -88,8 +109,8 @@
 
     .advisor h3 {
       color: white;
-      font-size: 17px;
-      margin-bottom: 15px;
+      font-size: 18px;
+      margin: 0 0 15px;
     }
 
     .buttons {
@@ -101,14 +122,14 @@
 
     .contact-btn {
       display: inline-block;
-      padding: 12px 18px;
+      padding: 12px 17px;
       border: 1px solid #d8b56d;
       border-radius: 9px;
       background: #d8b56d;
       color: #101b2d;
       text-decoration: none;
-      font-weight: bold;
       font-size: 14px;
+      font-weight: bold;
     }
 
     .contact-btn.telegram {
@@ -116,41 +137,17 @@
       color: #d8b56d;
     }
 
-    .contact-btn:focus-visible {
-      outline: 2px solid white;
-      outline-offset: 3px;
-    }
-
-    .listings {
-      width: calc(100% - 24px);
-      max-width: 900px;
-      margin: 35px auto;
-      padding: 25px 16px;
-      border: 1px solid #d8b56d;
-      border-radius: 18px;
-    }
-
-    .listings-intro {
-      color: white;
-      line-height: 2;
-    }
-
-    .empty-listings {
-      margin-top: 20px;
-      padding: 22px 15px;
-      border: 1px solid #51482f;
-      border-radius: 12px;
-      background: #16243a;
-      color: white;
-      line-height: 2;
+    .contact-btn:hover {
+      opacity: 0.85;
     }
 
     footer {
-      padding: 25px 10px;
       margin-top: 30px;
-      color: #d8b56d;
+      padding: 25px 10px;
       border-top: 1px solid #d8b56d;
-      font-size: 15px;
+      color: #d8b56d;
+      font-size: 14px;
+      line-height: 2;
     }
   </style>
 </head>
@@ -164,11 +161,11 @@
   <img
     class="banner"
     src="IMG_20261025_154346_409.jpg"
-    alt="بنر املاک هدایتی تبریز"
+    alt="املاک هدایتی تبریز"
   >
 
   <section class="welcome">
-    <p>به وب‌سایت ما خوش آمدید</p>
+    <p>به وب‌سایت املاک هدایتی خوش آمدید</p>
     <p>خانه‌ای برای آینده‌ای بهتر</p>
 
     <p class="slogan">
@@ -177,49 +174,12 @@
     </p>
   </section>
 
-  <section class="contact">
-    <h2>ارتباط با املاک هدایتی</h2>
-
-    <p class="contact-intro">
-      برای خرید، فروش و اجاره ملک در تبریز با ما در ارتباط باشید.
-    </p>
-
-    <div class="advisor">
-      <h3>مشاور اول:داود هدایتی</h3>
-      <div class="buttons">
-        <a class="contact-btn" href="tel:+989149168334">
-          تماس با مشاور اول
-        </a>
-
-        <a class="contact-btn telegram"
-           href="https://t.me/+989149168334"
-           target="_blank" rel="noopener noreferrer">
-          تلگرام مشاور اول
-        </a>
-      </div>
-    </div>
-
-    <div class="advisor">
-      <h3>مشاور دوم:محمدجواد هدایتی</h3>
-      <div class="buttons">
-        <a class="contact-btn" href="tel:+989304687712">
-          تماس با مشاور دوم
-        </a>
-
-        <a class="contact-btn telegram"
-           href="https://t.me/+989304687712"
-           target="_blank" rel="noopener noreferrer">
-          تلگرام مشاور دوم
-        </a>
-      </div>
-    </div>
-  </section>
-
+  <!-- آگهی‌ها قبل از بخش ارتباط با مشاوران -->
   <section class="listings" id="listings">
     <h2>آگهی‌های خرید و فروش ملک</h2>
 
     <p class="listings-intro">
-      جدیدترین فایل‌های ملکی املاک هدایتی تبریز
+      فایل‌های ملکی املاک هدایتی در تبریز
     </p>
 
     <div class="empty-listings">
@@ -233,7 +193,56 @@
     </div>
   </section>
 
+  <!-- ارتباط با مشاوران بعد از آگهی‌ها -->
+  <section class="contact" id="contact">
+    <h2>ارتباط با مشاوران املاک هدایتی</h2>
+
+    <p class="contact-intro">
+      برای خرید، فروش و اجاره ملک در تبریز با ما در ارتباط باشید.
+    </p>
+
+    <div class="advisor">
+      <h3>مشاور اول: داود هدایتی</h3>
+
+      <div class="buttons">
+        <a class="contact-btn" href="tel:+989149168334">
+          تماس با داود هدایتی
+        </a>
+
+        <a
+          class="contact-btn telegram"
+          href="https://t.me/+989149168334"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          تلگرام داود هدایتی
+        </a>
+      </div>
+    </div>
+
+    <div class="advisor">
+      <h3>مشاور دوم: محمدجواد هدایتی</h3>
+
+      <div class="buttons">
+        <a class="contact-btn" href="tel:+989304687712">
+          تماس با محمدجواد هدایتی
+        </a>
+
+        <a
+          class="contact-btn telegram"
+          href="https://t.me/+989304687712"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          تلگرام محمدجواد هدایتی
+        </a>
+      </div>
+    </div>
+  </section>
+
   <footer>
+    املاک هدایتی | خرید و فروش ملک در تبریز
+    <br>
     ساخته‌شده توسط محمدجواد هدایتی
   </footer>
 
